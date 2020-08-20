@@ -22,4 +22,5 @@ and today (as on August 17 and 18), the script wasn't recognizing the file path 
 and there wasn't a slight change in my code scripts nor I had moved the dataset around. So, 
 therefore, I was unable to make a test case for Task 2 unfortunately.I was using the latest 
 version of Sypder with Python 3.7. 
+- (GitHub) Not sure how to deal with the 'DS_store'.
 
