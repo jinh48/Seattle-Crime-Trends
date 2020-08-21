@@ -111,7 +111,7 @@ def problem1c_t(df):
     df['Sum'] = 1
     df = df[['Beat', 'Sum']].copy()
     df = df.groupby(['Beat'])['Sum'].sum()
-    beats = gpd.read_file('/project/SPD_BEATS_WGS84/SPD_BEATS_WGS84.shp')
+    beats = gpd.read_file('/project/codes/SPD_BEATS_WGS84/SPD_BEATS_WGS84.shp')
     merged = beats.merge(df, left_on='BEAT', right_on='Beat', how='inner')
     assert_equals(51, len(merged))   # there are 51 beats in Seattle
 
@@ -203,7 +203,7 @@ def problem3b_t(df, force):
     """
     df['Year'] = df['Offense Start DateTime'].str[0:4].dropna().astype(int)
     df['Sum'] = 1
-    beats = gpd.read_file('/project/SPD_BEATS_WGS84/SPD_BEATS_WGS84.shp')
+    beats = gpd.read_file('/project/codes/SPD_BEATS_WGS84/SPD_BEATS_WGS84.shp')
 
     problem3b_helper0_t(df, beats, 2015)
     a, b, c = problem3b_helper123_t(force, beats, '2015')
@@ -268,10 +268,10 @@ def main():
     """
     reads SPD crime data and use of force data and runs all the test methods.
     """
-    df = pd.read_csv('/project/SPD_Crime_Data__2008-Present.csv')
+    df = pd.read_csv('/project/codes/SPD_Crime_Data__2008-Present.csv')
     problem1ab_t(df)
     problem1c_t(df)
-    force = pd.read_csv('/project/Use_Of_Force.csv')
+    force = pd.read_csv('/project/codes/Use_Of_Force.csv')
     problem3a_t(force)
     problem3b_t(df, force)
 
