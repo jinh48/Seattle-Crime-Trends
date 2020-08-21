@@ -3,10 +3,10 @@ This project has four tasks. Task 1 and 3 are in Task1_3.py, task 2 is in Task2A
 Task 1 and 3's test is in Task1_3_test.py, task 4's test is in Task4_test.py, task 2 does not have tests. See "Note" part at the end.  
 All task files include paths to read files. The paths only include the uploaded folder.  
 The datasets can all be downloaded from Seattle.gov website:  
-https://data.seattle.gov/Public-Safety/SPD-Crime-Data-2008-Present/tazs-3rd5 The downloaded file contains a dash. Should be replaced by an underscore.  
+https://data.seattle.gov/Public-Safety/SPD-Crime-Data-2008-Present/tazs-3rd5   
 https://data.seattle.gov/Public-Safety/Use-Of-Force/ppi5-g2bj  
 https://data.seattle.gov/Public-Safety/Seattle-Police-Department-Beats/nnxn-434b
-https://data.seattle.gov/Public-Safety/Seattle-Crime-Stats-by-1990-Census-Tract-1996-2007/e3zj-s4zh he downloaded file contains a dash. Should be replaced by an underscore.  
+https://data.seattle.gov/Public-Safety/Seattle-Crime-Stats-by-1990-Census-Tract-1996-2007/e3zj-s4zh  
 https://data.seattle.gov/Land-Base/Census-Tracts-1990/qtbw-f6xb  
 https://data.seattle.gov/dataset/Housing-Cost-Burden-by-Race/2cxc-b9bd
 
