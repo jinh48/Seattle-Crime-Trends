@@ -159,7 +159,7 @@ def problem1c(df):
     df['Sum'] = 1
     df = df[['Beat', 'Sum']].copy()
     df = df.groupby(['Beat'])['Sum'].sum()
-    beats = gpd.read_file('/project/SPD_BEATS_WGS84/SPD_BEATS_WGS84.shp')
+    beats = gpd.read_file('/project/codes/SPD_BEATS_WGS84/SPD_BEATS_WGS84.shp')
     fig, ax = plt.subplots(1)
     beats.plot(color="#EEEEEE", ax=ax)
     merged = beats.merge(df, left_on='BEAT', right_on='Beat', how='inner')
@@ -284,7 +284,7 @@ def problem3b(df, force):
     """
     df['Year'] = df['Offense Start DateTime'].str[0:4].dropna().astype(int)
     df['Sum'] = 1
-    beats = gpd.read_file('/project/SPD_BEATS_WGS84/SPD_BEATS_WGS84.shp')
+    beats = gpd.read_file('/project/codes/SPD_BEATS_WGS84/SPD_BEATS_WGS84.shp')
     problem3b_helper0(df, beats, 2015)
     plt.suptitle('2015 Crime Ratio')
     plt.savefig('3b2015_0.png')
@@ -367,10 +367,10 @@ def main():
     Then it processes files in different methods corresponding to different
     research questions.
     """
-    df = pd.read_csv('/project/SPD_Crime_Data__2008-Present.csv')
+    df = pd.read_csv('/project/codes/SPD_Crime_Data__2008-Present.csv')
     problem1ab(df)
     problem1c(df)
-    force = pd.read_csv('/project/Use_Of_Force.csv')
+    force = pd.read_csv('/project/codes/Use_Of_Force.csv')
     problem3a(force)
     problem3b(df, force)
 
